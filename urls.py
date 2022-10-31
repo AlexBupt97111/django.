@@ -25,7 +25,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('captcha',include('captcha.urls')),
-    path('', include('women.urls')),#delete pref women- and all routes - from domen name
+    path('', include('women.urls')), #delete pref women- and all routes - from domen name
 
 ]
 if settings.DEBUG: #in checking, not it in fight
@@ -35,7 +35,7 @@ if settings.DEBUG: #in checking, not it in fight
         path('__debug__/', include(debug_toolbar.urls)),
     ] + urlpatterns
 
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)# add rout in che
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #add rout in che
     #for static data, graphic files add 1)prefix MEDIA, 2) root folder, where located files
 
-handler404 = pageNotFound#create handler
+handler404 = pageNotFound #create handler
