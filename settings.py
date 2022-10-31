@@ -12,23 +12,23 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os #module
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+#Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
+#Quick-start development settings - unsuitable for production
+#See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+#SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-r0^+cenueh#lwhlv+7-v=5(-+vne!j_ul1=d9yg_dmh*wh8o($'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+#SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True #checking mode
 
 ALLOWED_HOSTS = ['127.0.0.1']#use local
 
 
-# Application definition
+#Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -75,8 +75,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'trainsite.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+#Database
+#https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -86,8 +86,8 @@ DATABASES = {
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
+#Password validation
+#https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -105,8 +105,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/3.2/topics/i18n/
+#Internationalization
+#https://docs.djangoproject.com/en/3.2/topics/i18n/
 
 LANGUAGE_CODE = 'uk'
 
@@ -119,14 +119,14 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
+#Static files (CSS, JavaScript, Images)
+#https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'#prefix for static files
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')#way to common folder static, where will all static files
+STATIC_URL = '/static/' #prefix for static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') #way to common folder static, where will all static files
 STATICFILES_DIRS = []#FOR NO-STANDART WAYS
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+#Default primary key field type
+#https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -142,8 +142,8 @@ INTERNAL_IPS = [
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION': os.path.join(BASE_DIR, 'trainsite_cache'),#; create folder, Base Dir - save catalog
+        'LOCATION': os.path.join(BASE_DIR, 'trainsite_cache'), #create folder, Base Dir - save catalog
     }
 }
-SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']# solve problem with captcha
+SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error'] #solve problem with captcha
 
